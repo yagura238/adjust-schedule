@@ -1,0 +1,11 @@
+<h1>
+  Welcome to {{ title }}!
+</h1>
+
+<input type="text" [(ngModel)]="event.title">
+<input type="button" (click)="add()" value="追加">
+
+<p *ngFor="let e of events;">
+  <button (click)="remove(e.id)">削除</button>
+  {{e.title}}
+</p>
